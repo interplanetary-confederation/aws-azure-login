@@ -37,3 +37,4 @@ jobs:
           snapshot: true
           tags: aarch64
           dockerfile: ./alt/aarch64/Dockerfile
+          context: .
