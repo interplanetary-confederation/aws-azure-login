@@ -52,6 +52,6 @@ RUN ln -s /usr/bin/chromium /usr/bin/chromium-browser
 RUN cd /aws-azure-login \
    && yarn install --production
 
-COPY ../../lib /aws-azure-login/lib
+COPY ./lib /aws-azure-login/lib
 
 ENTRYPOINT ["node", "/aws-azure-login/lib", "--no-sandbox"]
