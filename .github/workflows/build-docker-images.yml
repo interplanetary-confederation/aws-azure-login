@@ -12,6 +12,14 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
+      
+      - run: yarn install
+      - run: yarn test
+      - run: yarn build
+      - uses: actions/upload-artifact@v2
+        with:
+          name: lib
+          path: lib
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
